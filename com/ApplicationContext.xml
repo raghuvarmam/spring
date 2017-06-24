@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="addrset" class="com.refer.beans.using.setget.Address">
+		<property name="pno" value="9791573352"></property>
+		<property name="email" value="raghu@gmail.com"></property>
+	</bean>	
+	<bean id="empset" class="com.refer.beans.using.setget.Employee">
+		<property name="eid" value="123"></property>
+		<property name="name" value="raghu"></property>
+		<property name="addr" ref="addrset"></property>
+	</bean>
+	
+		<bean id="spring1" class="spring_core.spring.demo.ArithmeticOperations" />
+		
+				<bean id="animal" class="com.construc.demo.Cat" >
+				<constructor-arg value= "4"></constructor-arg>
+				<constructor-arg value= "6 "></constructor-arg>
+				<constructor-arg value= "pet"></constructor-arg>
+				</bean>
+				
+		<bean id="dog" class="com.construcr.obejct.ref.Dog" />
+		<bean id="cat" class="com.construcr.obejct.ref.Cat" />
+		<bean id="veterandoctor" class="com.construcr.obejct.ref.VeteranDoctor" >
+				<constructor-arg value="doctorName"></constructor-arg>
+				<constructor-arg value="veteranDocName"></constructor-arg>
+				<constructor-arg ref="dog"></constructor-arg>
+		</bean>
+		
+		<bean id="emp1" class="com.demo.emp.collection.Employee" >
+		<property name="eid" value="1"></property>
+		<property name="ename" value="raju"></property>
+		<property name="sal" value="50000"></property>
+		</bean>
+		
+		<bean id="emp2" class="com.demo.emp.collection.Employee" >
+		<property name="eid" value="2"></property>
+		<property name="ename" value="vikram"></property>
+		<property name="sal" value="25000"></property>
+		</bean>
+		
+	
+
+</beans>
